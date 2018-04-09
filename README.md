@@ -44,6 +44,10 @@ Note: Planned releases are for information only, they are subject to change with
 - No new features planned. Features and bugfixes will be made on an ad-hoc basis as needed to support Swiftfire development.
 - For feature requests and bugfixes please contact rien@balancingrock.nl
 
-#### 1.0.0 (Current)
+#### 1.1.0 (Current)
+
+- Migrated to SPM 4
+
+#### 1.0.0
 
 - Initial release
