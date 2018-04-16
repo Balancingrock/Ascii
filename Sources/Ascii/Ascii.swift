@@ -3,7 +3,7 @@
 //  File:       Ascii.swift
 //  Project:    Ascii
 //
-//  Version:    1.0.0
+//  Version:    1.2.0
 //
 //  Author:     Marinus van der Lugt
 //  Company:    http://balancingrock.nl
@@ -47,7 +47,8 @@
 //
 // History
 //
-// 1.0.0  - Initial release
+// 1.2.0 - Added Character extension
+// 1.0.0 - Initial release
 // =====================================================================================================================
 
 
@@ -61,61 +62,61 @@ public let _NUL: ASCII = 0x00
 
 ///
 public let _SOH: ASCII = 0x01
-    
+
 ///
 public let _STX: ASCII = 0x02
-    
+
 ///
 public let _ETX: ASCII = 0x03
-    
+
 ///
 public let _EOT: ASCII = 0x04
-    
+
 ///
 public let _ENQ: ASCII = 0x05
-    
+
 ///
 public let _ACK: ASCII = 0x06
-    
+
 ///
 public let _BEL: ASCII = 0x07
-    
+
 ///
 public let _BS:  ASCII = 0x08
-    
+
 ///
 public let _BACKSPACE = _BS
-    
+
 ///
 public let _TAB: ASCII = 0x09
-    
+
 ///
 public let _LF:  ASCII = 0x0A
-    
+
 ///
 public let _LINEFEED = _LF
-    
+
 ///
 public let _NEWLINE = _LF
-    
+
 ///
 public let _VT:  ASCII = 0x0B
-    
+
 ///
 public let _FF:  ASCII = 0x0C
-    
+
 ///
 public let _FORMFEED = _FF
-    
+
 ///
 public let _CR:  ASCII = 0x0D
-    
+
 ///
 public let _CARRIAGE_RETURN = _CR
-    
+
 ///
 public let _RETURN = _CR
-    
+
 ///
 public let _SO:  ASCII = 0x0E
 
@@ -136,7 +137,7 @@ public let _DC3: ASCII = 0x13
 
 ///
 public let _DC4: ASCII = 0x14
-    
+
 ///
 public let _NAK: ASCII = 0x15
 
@@ -163,7 +164,7 @@ public let _FS:  ASCII = 0x1C
 
 ///
 public let _GS:  ASCII = 0x1D
-    
+
 ///
 public let _RS:  ASCII = 0x1E
 
@@ -720,4 +721,170 @@ public extension ASCII {
         return Ascii.symbolLookup[Int(self)]
     }
 }
+
+
+// MARK: - Character protocol extensions
+
+public extension Character {
+    
+    static let _NUL: Character = Character(UnicodeScalar(Ascii._NUL))
+    static let _SOH: Character = Character(UnicodeScalar(Ascii._SOH))
+    static let _STX: Character = Character(UnicodeScalar(Ascii._STX))
+    static let _ETX: Character = Character(UnicodeScalar(Ascii._ETX))
+    static let _EOT: Character = Character(UnicodeScalar(Ascii._EOT))
+    static let _ENQ: Character = Character(UnicodeScalar(Ascii._ENQ))
+    static let _ACK: Character = Character(UnicodeScalar(Ascii._ACK))
+    static let _BEL: Character = Character(UnicodeScalar(Ascii._BEL))
+    static let _BS: Character = Character(UnicodeScalar(Ascii._BS))
+    static let _BACKSPACE: Character = Character._BS
+    static let _TAB: Character = Character(UnicodeScalar(Ascii._TAB))
+    static let _LF: Character = Character(UnicodeScalar(Ascii._LF))
+    static let _LINEFEED: Character = Character._LF
+    static let _NEWLINE: Character = Character._LF
+    static let _VT: Character = Character(UnicodeScalar(Ascii._VT))
+    static let _FF: Character = Character(UnicodeScalar(Ascii._FF))
+    static let _FORMFEED: Character = Character._FF
+    static let _CR: Character = Character(UnicodeScalar(Ascii._CR))
+    static let _CARRIAGE_RETURN: Character = Character._CR
+    static let _RETURN: Character = Character._CR
+    static let _SO: Character = Character(UnicodeScalar(Ascii._SO))
+    static let _SI: Character = Character(UnicodeScalar(Ascii._SI))
+    static let _DLE: Character = Character(UnicodeScalar(Ascii._DLE))
+    static let _DC1: Character = Character(UnicodeScalar(Ascii._DC1))
+    static let _DC2: Character = Character(UnicodeScalar(Ascii._DC2))
+    static let _DC3: Character = Character(UnicodeScalar(Ascii._DC3))
+    static let _DC4: Character = Character(UnicodeScalar(Ascii._DC4))
+    static let _NAK: Character = Character(UnicodeScalar(Ascii._NAK))
+    static let _SYN: Character = Character(UnicodeScalar(Ascii._SYN))
+    static let _ETB: Character = Character(UnicodeScalar(Ascii._ETB))
+    static let _CAN: Character = Character(UnicodeScalar(Ascii._CAN))
+    static let _EM: Character = Character(UnicodeScalar(Ascii._EM))
+    static let _SUB: Character = Character(UnicodeScalar(Ascii._SUB))
+    static let _ESC: Character = Character(UnicodeScalar(Ascii._ESC))
+    static let _FS: Character = Character(UnicodeScalar(Ascii._FS))
+    static let _GS: Character = Character(UnicodeScalar(Ascii._GS))
+    static let _RS: Character = Character(UnicodeScalar(Ascii._RS))
+    static let _US: Character = Character(UnicodeScalar(Ascii._US))
+    static let _SPACE: Character = Character(UnicodeScalar(Ascii._SPACE))
+    static let _BLANK: Character = Character._SPACE
+    static let _EXCLAMATION_MARK: Character = Character(UnicodeScalar(Ascii._EXCLAMATION_MARK))
+    static let _DOUBLE_QUOTES: Character = Character(UnicodeScalar(Ascii._DOUBLE_QUOTES))
+    static let _NUMBER: Character = Character(UnicodeScalar(Ascii._NUMBER))
+    static let _HASH: Character = Character._NUMBER
+    static let _DOLLAR: Character = Character(UnicodeScalar(Ascii._DOLLAR))
+    static let _PERCENT_SIGN: Character = Character(UnicodeScalar(Ascii._PERCENT_SIGN))
+    static let _AMPERSAND: Character = Character(UnicodeScalar(Ascii._AMPERSAND))
+    static let _SINGLE_QUOTE: Character = Character(UnicodeScalar(Ascii._SINGLE_QUOTE))
+    static let _ROUND_BRACKET_OPEN: Character = Character(UnicodeScalar(Ascii._ROUND_BRACKET_OPEN))
+    static let _PARENTHESES_OPEN: Character = Character._ROUND_BRACKET_OPEN
+    static let _FUNCTION_BRACKET_OPEN: Character = Character._ROUND_BRACKET_OPEN
+    static let _ROUND_BRACKET_CLOSE: Character = Character(UnicodeScalar(Ascii._ROUND_BRACKET_CLOSE))
+    static let _PARENTHESES_CLOSE: Character = Character._ROUND_BRACKET_CLOSE
+    static let _FUNCTION_BRACKET_CLOSE: Character = Character._ROUND_BRACKET_CLOSE
+    static let _ASTERISK: Character = Character(UnicodeScalar(Ascii._ASTERISK))
+    static let _PLUS: Character = Character(UnicodeScalar(Ascii._PLUS))
+    static let _COMMA: Character = Character(UnicodeScalar(Ascii._COMMA))
+    static let _HYPHEN: Character = Character(UnicodeScalar(Ascii._HYPHEN))
+    static let _MINUS: Character = Character._HYPHEN
+    static let _DASH: Character = Character._HYPHEN
+    static let _PERIOD: Character = Character(UnicodeScalar(Ascii._PERIOD))
+    static let _DOT: Character = Character._PERIOD
+    static let _POINT: Character = Character._PERIOD
+    static let _SLASH: Character = Character(UnicodeScalar(Ascii._SLASH))
+    static let _SOLIDUS: Character = Character._SLASH
+    static let _FOREWARD_SLASH: Character = Character._SLASH
+    static let _SLASH_FOREWARD: Character = Character._SLASH
+    static let _0: Character = Character(UnicodeScalar(Ascii._0))
+    static let _1: Character = Character(UnicodeScalar(Ascii._1))
+    static let _2: Character = Character(UnicodeScalar(Ascii._2))
+    static let _3: Character = Character(UnicodeScalar(Ascii._3))
+    static let _4: Character = Character(UnicodeScalar(Ascii._4))
+    static let _5: Character = Character(UnicodeScalar(Ascii._5))
+    static let _6: Character = Character(UnicodeScalar(Ascii._6))
+    static let _7: Character = Character(UnicodeScalar(Ascii._7))
+    static let _8: Character = Character(UnicodeScalar(Ascii._8))
+    static let _9: Character = Character(UnicodeScalar(Ascii._9))
+    static let _COLON: Character = Character(UnicodeScalar(Ascii._COLON))
+    static let _SEMICOLON: Character = Character(UnicodeScalar(Ascii._SEMICOLON))
+    static let _LESS_THAN: Character = Character(UnicodeScalar(Ascii._LESS_THAN))
+    static let _LT: Character = Character._LESS_THAN
+    static let _EQUALS: Character = Character(UnicodeScalar(Ascii._EQUALS))
+    static let _GREATER_THAN: Character = Character(UnicodeScalar(Ascii._GREATER_THAN))
+    static let _GT: Character = Character._GREATER_THAN
+    static let _QUESTION_MARK: Character = Character(UnicodeScalar(Ascii._QUESTION_MARK))
+    static let _AT_SYMBOL: Character = Character(UnicodeScalar(Ascii._AT_SYMBOL))
+    static let _A: Character = Character(UnicodeScalar(Ascii._A))
+    static let _B: Character = Character(UnicodeScalar(Ascii._B))
+    static let _C: Character = Character(UnicodeScalar(Ascii._C))
+    static let _D: Character = Character(UnicodeScalar(Ascii._D))
+    static let _E: Character = Character(UnicodeScalar(Ascii._E))
+    static let _F: Character = Character(UnicodeScalar(Ascii._F))
+    static let _G: Character = Character(UnicodeScalar(Ascii._G))
+    static let _H: Character = Character(UnicodeScalar(Ascii._H))
+    static let _I: Character = Character(UnicodeScalar(Ascii._I))
+    static let _J: Character = Character(UnicodeScalar(Ascii._J))
+    static let _K: Character = Character(UnicodeScalar(Ascii._K))
+    static let _L: Character = Character(UnicodeScalar(Ascii._L))
+    static let _M: Character = Character(UnicodeScalar(Ascii._M))
+    static let _N: Character = Character(UnicodeScalar(Ascii._N))
+    static let _O: Character = Character(UnicodeScalar(Ascii._O))
+    static let _P: Character = Character(UnicodeScalar(Ascii._P))
+    static let _Q: Character = Character(UnicodeScalar(Ascii._Q))
+    static let _R: Character = Character(UnicodeScalar(Ascii._R))
+    static let _S: Character = Character(UnicodeScalar(Ascii._S))
+    static let _T: Character = Character(UnicodeScalar(Ascii._T))
+    static let _U: Character = Character(UnicodeScalar(Ascii._U))
+    static let _V: Character = Character(UnicodeScalar(Ascii._V))
+    static let _W: Character = Character(UnicodeScalar(Ascii._W))
+    static let _X: Character = Character(UnicodeScalar(Ascii._X))
+    static let _Y: Character = Character(UnicodeScalar(Ascii._Y))
+    static let _Z: Character = Character(UnicodeScalar(Ascii._Z))
+    static let _SQUARE_BRACKET_OPEN: Character = Character(UnicodeScalar(Ascii._SQUARE_BRACKET_OPEN))
+    static let _BOX_BRACKET_OPEN: Character = Character._SQUARE_BRACKET_OPEN
+    static let _ARRAY_BRACKET_OPEN: Character = Character._SQUARE_BRACKET_OPEN
+    static let _BACKSLASH: Character = Character(UnicodeScalar(Ascii._BACKSLASH))
+    static let _REVERSE_SOLIDUS: Character = Character._BACKSLASH
+    static let _BACKWARD_SLASH: Character = Character._BACKSLASH
+    static let _SLASH_BACKWARD: Character = Character._BACKSLASH
+    static let _SQUARE_BRACKET_CLOSE: Character = Character(UnicodeScalar(Ascii._SQUARE_BRACKET_CLOSE))
+    static let _BOX_BRACKET_CLOSE: Character = Character._SQUARE_BRACKET_CLOSE
+    static let _ARRAY_BRACKET_CLOSE: Character = Character._SQUARE_BRACKET_CLOSE
+    static let _CARET: Character = Character(UnicodeScalar(Ascii._CARET))
+    static let _UNDERSCORE: Character = Character(UnicodeScalar(Ascii._UNDERSCORE))
+    static let _GRAVE_ACCENT: Character = Character(UnicodeScalar(Ascii._GRAVE_ACCENT))
+    static let _a: Character = Character(UnicodeScalar(Ascii._a))
+    static let _b: Character = Character(UnicodeScalar(Ascii._b))
+    static let _c: Character = Character(UnicodeScalar(Ascii._c))
+    static let _d: Character = Character(UnicodeScalar(Ascii._d))
+    static let _e: Character = Character(UnicodeScalar(Ascii._e))
+    static let _f: Character = Character(UnicodeScalar(Ascii._f))
+    static let _g: Character = Character(UnicodeScalar(Ascii._g))
+    static let _h: Character = Character(UnicodeScalar(Ascii._h))
+    static let _i: Character = Character(UnicodeScalar(Ascii._i))
+    static let _j: Character = Character(UnicodeScalar(Ascii._j))
+    static let _k: Character = Character(UnicodeScalar(Ascii._k))
+    static let _l: Character = Character(UnicodeScalar(Ascii._l))
+    static let _m: Character = Character(UnicodeScalar(Ascii._m))
+    static let _n: Character = Character(UnicodeScalar(Ascii._n))
+    static let _o: Character = Character(UnicodeScalar(Ascii._o))
+    static let _p: Character = Character(UnicodeScalar(Ascii._p))
+    static let _q: Character = Character(UnicodeScalar(Ascii._q))
+    static let _r: Character = Character(UnicodeScalar(Ascii._r))
+    static let _s: Character = Character(UnicodeScalar(Ascii._s))
+    static let _t: Character = Character(UnicodeScalar(Ascii._t))
+    static let _u: Character = Character(UnicodeScalar(Ascii._u))
+    static let _v: Character = Character(UnicodeScalar(Ascii._v))
+    static let _w: Character = Character(UnicodeScalar(Ascii._w))
+    static let _x: Character = Character(UnicodeScalar(Ascii._x))
+    static let _y: Character = Character(UnicodeScalar(Ascii._y))
+    static let _z: Character = Character(UnicodeScalar(Ascii._z))
+    static let _BRACE_OPEN: Character = Character(UnicodeScalar(Ascii._BRACE_OPEN))
+    static let _CURLY_BRACE_OPEN: Character = Character._BRACE_OPEN
+    static let _VERTICAL_BAR: Character = Character(UnicodeScalar(Ascii._VERTICAL_BAR))
+    static let _BRACE_CLOSE: Character = Character(UnicodeScalar(Ascii._BRACE_CLOSE))
+    static let _CURLY_BRACE_CLOSE: Character = Character._BRACE_CLOSE
+    static let _TILDE: Character = Character(UnicodeScalar(Ascii._TILDE))
+    static let _DELETE: Character = Character(UnicodeScalar(Ascii._DELETE))
+}
+
 

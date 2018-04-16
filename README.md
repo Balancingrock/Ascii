@@ -39,12 +39,16 @@ In the project where Ascii should be used: Select the target, go to the `General
 
 Note: Planned releases are for information only, they are subject to change without notice.
 
-#### 1.1.0 (Open)
+#### 1.3.0 (Open)
 
 - No new features planned. Features and bugfixes will be made on an ad-hoc basis as needed to support Swiftfire development.
 - For feature requests and bugfixes please contact rien@balancingrock.nl
 
-#### 1.1.0 (Current)
+#### 1.2.0 (Current)
+
+- Added Ascii set as extension to Characters.
+
+#### 1.1.0
 
 - Migrated to SPM 4
 
