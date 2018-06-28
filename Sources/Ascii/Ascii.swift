@@ -3,7 +3,7 @@
 //  File:       Ascii.swift
 //  Project:    Ascii
 //
-//  Version:    1.2.0
+//  Version:    1.3.0
 //
 //  Author:     Marinus van der Lugt
 //  Company:    http://balancingrock.nl
@@ -47,6 +47,7 @@
 //
 // History
 //
+// 1.3.0 - Added conversion extension for UInt16 and hexString
 // 1.2.0 - Added Character extension
 // 1.0.0 - Initial release
 // =====================================================================================================================
@@ -887,4 +888,15 @@ public extension Character {
     static let _DELETE: Character = Character(UnicodeScalar(Ascii._DELETE))
 }
 
-
+extension UInt16 {
+    
+    var hexString: String {
+        let msbString = UInt8((self >> 8) & 0x00FF).hexString
+        let lsbString = UInt8(self & 0x00FF).hexString
+        return msbString + lsbString
+    }
+    
+    init?(hexString: String) {
+        self.init(hexString, radix: 16)
+    }
+}
