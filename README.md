@@ -39,12 +39,24 @@ In the project where Ascii should be used: Select the target, go to the `General
 
 Note: Planned releases are for information only, they are subject to change without notice.
 
-#### 1.3.0 (Open)
+#### 1.5.0 (Open)
 
 - No new features planned. Features and bugfixes will be made on an ad-hoc basis as needed to support Swiftfire development.
 - For feature requests and bugfixes please contact rien@balancingrock.nl
 
-#### 1.2.0 (Current)
+#### 1.4.0 (Current)
+
+Upgraded to Swift 5
+
+#### 1.3.1
+
+Fixed access level for hexString
+
+#### 1.3.0
+
+Added conversion extension for UInt16 and hexString
+
+#### 1.2.0
 
 - Added Ascii set as extension to Characters.
 

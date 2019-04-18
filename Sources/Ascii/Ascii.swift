@@ -3,7 +3,7 @@
 //  File:       Ascii.swift
 //  Project:    Ascii
 //
-//  Version:    1.3.1
+//  Version:    1.4.0
 //
 //  Author:     Marinus van der Lugt
 //  Company:    http://balancingrock.nl
@@ -47,6 +47,7 @@
 //
 // History
 //
+// 1.4.0 - Updated for Swift 5
 // 1.3.1 - Fixed public access level for hexString
 // 1.3.0 - Added conversion extension for UInt16 and hexString
 // 1.2.0 - Added Character extension
@@ -670,56 +671,56 @@ public extension ASCII {
     
     /// True if the ASCII character is a control character (0x00..0x1F), false otherwise.
     
-    public var isAsciiControl: Bool {
+    var isAsciiControl: Bool {
         return Ascii.isControl(self)
     }
     
     
     /// True if the ASCII character is printable (0x20..0x7E), false otherwise.
     
-    public var isAsciiPrintable: Bool {
+    var isAsciiPrintable: Bool {
         return Ascii.isPrintable(self)
     }
     
     
     /// True if the ASCII character is a number (0..9), false otherwise.
     
-    public var isAsciiNumber: Bool {
+    var isAsciiNumber: Bool {
         return Ascii.isNumber(self)
     }
     
     
     /// True if the ASCII character is a hexadecimal (0..9, a..f, A..F), false otherwise.
     
-    public var isAsciiHexadecimalDigit: Bool {
+    var isAsciiHexadecimalDigit: Bool {
         return Ascii.isHexadecimalDigit(self)
     }
     
     
     /// True if the ASCII character is a white space (blank, tab, return, linefeed), false otherwise.
     
-    public var isAsciiWhitespace: Bool {
+    var isAsciiWhitespace: Bool {
         return Ascii.isWhitespace(self)
     }
     
     
     /// The string represenation of the hexadecimal value.
     
-    public var hexString: String {
+    var hexString: String {
         return Ascii.hexLookup[Int(self)]
     }
     
     
     /// A string of 1 printable character, unprintables are replaced by a dot.
     
-    public var textified: String {
+    var textified: String {
         return Ascii.dumpLookup[Int(self)]
     }
     
     
     /// A string of up to three characters representing the symbol for the value. Unprintables are represented by their abbreviation. Values > 0x7F are represented by a dot.
     
-    public var symbol: String {
+    var symbol: String {
         return Ascii.symbolLookup[Int(self)]
     }
 }
@@ -891,13 +892,13 @@ public extension Character {
 
 public extension UInt16 {
     
-    public var hexString: String {
+    var hexString: String {
         let msbString = UInt8((self >> 8) & 0x00FF).hexString
         let lsbString = UInt8(self & 0x00FF).hexString
         return msbString + lsbString
     }
     
-    public init?(hexString: String) {
+    init?(hexString: String) {
         self.init(hexString, radix: 16)
     }
 }
