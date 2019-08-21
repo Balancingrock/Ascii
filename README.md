@@ -12,7 +12,12 @@ The [reference manual](http://swiftfire.nl/projects/ascii/reference/index.html)
 
 No new features planned. Updates are made on an ad-hoc basis as needed to support Swiftfire development.
 
-#### 1.4.0 (Current)
+#### 1.4.1 (Current)
+
+- Upgraded swift tools to v5
+- Updated header
+
+#### 1.4.0
 
 Upgraded to Swift 5
 
