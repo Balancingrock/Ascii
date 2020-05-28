@@ -12,7 +12,11 @@ The [reference manual](http://swiftfire.nl/projects/ascii/reference/index.html)
 
 No new features planned. Updates are made on an ad-hoc basis as needed to support Swiftfire development.
 
-#### 1.4.1 (Current)
+#### 1.5.0
+
+- Added isExtendedAscii
+
+#### 1.4.1
 
 - Upgraded swift tools to v5
 - Updated header

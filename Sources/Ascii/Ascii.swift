@@ -3,7 +3,7 @@
 //  File:       Ascii.swift
 //  Project:    Ascii
 //
-//  Version:    1.4.1
+//  Version:    1.5.0
 //
 //  Author:     Marinus van der Lugt
 //  Company:    http://balancingrock.nl
@@ -34,6 +34,7 @@
 //
 // History
 //
+// 1.5.0 - Added isExtendedAscii
 // 1.4.1 - Changed header
 // 1.4.0 - Updated for Swift 5
 // 1.3.1 - Fixed public access level for hexString
@@ -710,6 +711,13 @@ public extension ASCII {
     
     var symbol: String {
         return Ascii.symbolLookup[Int(self)]
+    }
+    
+    
+    /// Returns true if the ascii is part of extended ascii, i.e. > 0x7F
+    
+    var isExtendedAscii: Bool {
+        return self > 127
     }
 }
 
