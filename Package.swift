@@ -4,7 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Ascii",
-    platforms: [.macOS(.v10_10), .iOS(.v9)],
+    platforms: [.macOS(.v10_10), .iOS(.v8)],
     products: [
         .library(name: "Ascii", targets: ["Ascii"])
     ],
