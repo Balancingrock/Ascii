@@ -12,6 +12,11 @@ The [reference manual](http://swiftfire.nl/projects/ascii/reference/index.html)
 
 No new features planned. Updates are made on an ad-hoc basis as needed to support Swiftfire development.
 
+#### 1.5.2
+
+- Added swift language versions to manifest
+- Added license file
+
 #### 1.5.1
 
 - Cleared git chaches to remove xcode project from the repo

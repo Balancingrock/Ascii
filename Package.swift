@@ -4,11 +4,12 @@ import PackageDescription
 
 let package = Package(
     name: "Ascii",
+    platforms: [.macOS(.v10_10), .iOS(.v9)],
     products: [
         .library(name: "Ascii", targets: ["Ascii"])
     ],
-    dependencies: [],
     targets: [
         .target(name: "Ascii", dependencies: [])
-    ]
+    ],
+    swiftLanguageVersions: [.v4, .v4_2, .v5]
 )
